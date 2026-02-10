@@ -1,0 +1,459 @@
+/* ============================================
+   HERO - DONOTA Advisory
+   ============================================ */
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* ── Background ───────────────────────────── */
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(160deg, #0b1222 0%, #0f1b2d 30%, #1a2a42 55%, #0f1b2d 100%);
+  z-index: 1;
+}
+
+/* ── Canvas (particles) ───────────────────── */
+.hero__canvas {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+/* ── Decorative shapes ────────────────────── */
+.hero__shapes {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+/* Smooth radial orbs */
+.hero__orb {
+  position: absolute;
+  border-radius: 50%;
+}
+
+.hero__orb--1 {
+  width: 550px;
+  height: 550px;
+  top: 2%;
+  right: -8%;
+  background: radial-gradient(circle, rgba(196, 149, 106, 0.09) 0%, transparent 70%);
+  animation: orbDrift1 16s ease-in-out infinite;
+}
+
+.hero__orb--2 {
+  width: 650px;
+  height: 650px;
+  bottom: -5%;
+  left: -12%;
+  background: radial-gradient(circle, rgba(196, 149, 106, 0.05) 0%, transparent 70%);
+  animation: orbDrift2 20s ease-in-out infinite;
+}
+
+.hero__orb--3 {
+  width: 320px;
+  height: 320px;
+  top: 38%;
+  left: 30%;
+  background: radial-gradient(circle, rgba(212, 160, 61, 0.035) 0%, transparent 70%);
+  animation: orbDrift3 13s ease-in-out infinite;
+}
+
+@keyframes orbDrift1 {
+
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  30% {
+    transform: translate(-25px, 18px) scale(1.04);
+  }
+
+  60% {
+    transform: translate(12px, -12px) scale(0.98);
+  }
+}
+
+@keyframes orbDrift2 {
+
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate(35px, -25px) scale(1.06);
+  }
+}
+
+@keyframes orbDrift3 {
+
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  40% {
+    transform: translate(-18px, 22px) scale(1.08);
+  }
+
+  75% {
+    transform: translate(20px, -8px) scale(0.96);
+  }
+}
+
+/* Subtle grid */
+.hero__grid {
+  position: absolute;
+  inset: 0;
+  opacity: 0.035;
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.15) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.15) 1px, transparent 1px);
+  background-size: 80px 80px;
+  mask-image: radial-gradient(ellipse 65% 55% at 50% 45%, black 15%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 65% 55% at 50% 45%, black 15%, transparent 100%);
+}
+
+/* Thin floating accent lines */
+.hero__line {
+  position: absolute;
+  z-index: 4;
+  pointer-events: none;
+}
+
+.hero__line--1 {
+  top: 28%;
+  left: 0;
+  width: 200px;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(196, 149, 106, 0.1), transparent);
+  animation: linePulse 11s ease-in-out infinite;
+}
+
+.hero__line--2 {
+  bottom: 32%;
+  right: 0;
+  width: 240px;
+  height: 1px;
+  background: linear-gradient(to left, transparent, rgba(196, 149, 106, 0.07), transparent);
+  animation: linePulse 14s ease-in-out infinite reverse;
+}
+
+@keyframes linePulse {
+
+  0%,
+  100% {
+    transform: translateX(0);
+    opacity: 0.4;
+  }
+
+  50% {
+    transform: translateX(30px);
+    opacity: 1;
+  }
+}
+
+/* ── Content ──────────────────────────────── */
+.hero__content {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 140px 32px 100px;
+}
+
+.hero__inner {
+  max-width: 860px;
+}
+
+/* Badge */
+.hero__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 28px;
+  padding: 6px 16px 6px 10px;
+  border-radius: 50px;
+  background: rgba(196, 149, 106, 0.05);
+  border: 1px solid rgba(196, 149, 106, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* Title */
+.hero__title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(1.85rem, 3.8vw, 3rem);
+  font-weight: 700;
+  line-height: 1.22;
+  color: white;
+  margin-bottom: 18px;
+  max-width: 740px;
+  letter-spacing: -0.01em;
+}
+
+/* Subtitle */
+.hero__subtitle {
+  font-size: clamp(0.9375rem, 1.4vw, 1.0625rem);
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.48);
+  max-width: 520px;
+  margin-bottom: 36px;
+}
+
+/* ── Buttons ──────────────────────────────── */
+.hero__actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.hero__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 30px;
+  border-radius: 50px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  font-family: 'DM Sans', system-ui, sans-serif;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.7);
+  border: 1.5px solid rgba(255, 255, 255, 0.15);
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero__btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(135deg, #b07d52, #c4956a);
+  opacity: 0;
+  transition: opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 0;
+}
+
+.hero__btn span,
+.hero__btn svg {
+  position: relative;
+  z-index: 1;
+}
+
+.hero__btn:hover {
+  border-color: rgba(196, 149, 106, 0.5);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(196, 149, 106, 0.18);
+}
+
+.hero__btn:hover::before {
+  opacity: 1;
+}
+
+.hero__btn:active {
+  transform: translateY(0);
+}
+
+.hero__btn--primary {
+  border-color: rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.82);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.hero__btn--secondary {
+  border-color: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.55);
+}
+
+/* Scroll indicator */
+.hero__scroll {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  text-align: center;
+}
+
+.hero__scroll button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.25);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.3s;
+}
+
+.hero__scroll button:hover {
+  color: rgba(196, 149, 106, 0.6);
+}
+
+.hero__fade {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 160px;
+  background: linear-gradient(to top, #0b1222, transparent);
+  z-index: 5;
+  pointer-events: none;
+}
+
+@media (max-width: 1024px) {
+  .hero__title {
+    font-size: clamp(1.75rem, 4.2vw, 2.6rem);
+    max-width: 620px;
+  }
+
+  .hero__orb--1 {
+    width: 380px;
+    height: 380px;
+  }
+
+  .hero__orb--2 {
+    width: 420px;
+    height: 420px;
+  }
+
+  .hero__orb--3 {
+    width: 220px;
+    height: 220px;
+  }
+}
+
+
+/* =========================================================
+   RESPONSIVE MODIFIÉ (Impact + Boutons empilés)
+   ========================================================= */
+@media (max-width: 768px) {
+  .hero__content {
+    padding: 120px 20px 80px;
+    margin-top: 0;
+  }
+
+  /* 1. Titre IMPACTANT (Grande taille) */
+  .hero__title {
+    font-size: 2.8rem;
+    line-height: 1.15;
+    max-width: 100%;
+    margin-bottom: 24px;
+  }
+
+  .hero__subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+    line-height: 1.5;
+  }
+
+  .hero__badge {
+    margin-bottom: 20px;
+  }
+
+  .hero__badge span:last-child {
+    font-size: 11px;
+  }
+
+  /* 2. Boutons EMPILÉS et LARGES */
+  .hero__actions {
+    flex-direction: column;
+    /* On empile les boutons */
+    width: 100%;
+    gap: 16px;
+  }
+
+  .hero__btn {
+    width: 100%;
+    /* Pleine largeur */
+    justify-content: center;
+    /* Texte centré */
+    height: 56px;
+    /* Plus haut pour le doigt */
+    padding: 0;
+    font-size: 1rem;
+  }
+
+  /* 3. Cacher l'icône du 2ème bouton UNIQUEMENT sur mobile */
+  .hero__btn--secondary svg {
+    display: none;
+  }
+
+  .hero__scroll {
+    bottom: 24px;
+  }
+
+  /* Ajustement Orbes Mobile */
+  .hero__orb--1 {
+    width: 260px;
+    height: 260px;
+    top: 8%;
+    right: -18%;
+  }
+
+  .hero__orb--2 {
+    width: 300px;
+    height: 300px;
+  }
+
+  .hero__orb--3 {
+    display: none;
+  }
+
+  .hero__line--1,
+  .hero__line--2 {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero__content {
+    padding: 110px 16px 70px;
+  }
+
+  .hero__title {
+    font-size: 2.2rem;
+    /* Légèrement ajusté pour très petits écrans */
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+
+  .hero__orb--1,
+  .hero__orb--2,
+  .hero__orb--3,
+  .hero__line--1,
+  .hero__line--2 {
+    animation: none;
+  }
+
+  .hero__btn {
+    transition-duration: 0.01ms;
+  }
+
+  .hero__btn::before {
+    transition-duration: 0.01ms;
+  }
+}

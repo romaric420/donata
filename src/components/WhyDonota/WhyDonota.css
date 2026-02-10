@@ -1,0 +1,339 @@
+/* =========================================
+   VARIABLES & GLOBAL
+   ========================================= */
+:root {
+  --bg-navy: #0f1b2d;
+  --glass-bg: rgba(30, 41, 59, 0.4);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --accent-copper: #b07d52;
+  --accent-gold: #e9c062;
+  --text-white: #ffffff;
+  --text-grey: #94a3b8;
+}
+
+.why-section-wrapper {
+  position: relative;
+  padding: 120px 0;
+  overflow: hidden;
+  background: var(--bg-navy);
+}
+
+.why-container {
+  position: relative;
+  z-index: 5;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+/* =========================================
+   ANIMATED BACKGROUND (BLOBS)
+   ========================================= */
+.why-animated-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  /* Flou très doux */
+  opacity: 0.35;
+  animation: floatBlob 12s infinite alternate ease-in-out;
+}
+
+.blob-1 {
+  width: 500px;
+  height: 500px;
+  background: var(--accent-copper);
+  top: -100px;
+  left: -100px;
+}
+
+.blob-2 {
+  width: 400px;
+  height: 400px;
+  background: #1a2a42;
+  bottom: -50px;
+  right: -50px;
+  animation-delay: -5s;
+}
+
+.blob-3 {
+  width: 300px;
+  height: 300px;
+  background: var(--accent-gold);
+  top: 30%;
+  left: 40%;
+  opacity: 0.1;
+}
+
+@keyframes floatBlob {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(30px, 40px);
+  }
+}
+
+/* =========================================
+   HEADER
+   ========================================= */
+.why-header {
+  text-align: center;
+  margin-bottom: 70px;
+  position: relative;
+  z-index: 2;
+}
+
+.why-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(176, 125, 82, 0.1);
+  border: 1px solid rgba(176, 125, 82, 0.2);
+  padding: 6px 16px;
+  border-radius: 50px;
+  margin-bottom: 20px;
+  backdrop-filter: blur(5px);
+}
+
+.badge-dot {
+  width: 6px;
+  height: 6px;
+  background: var(--accent-gold);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--accent-gold);
+}
+
+.badge-text {
+  font-size: 0.75rem;
+  color: var(--accent-gold);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.why-title {
+  font-family: 'Times New Roman', serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  color: var(--text-white);
+  margin: 0 0 20px 0;
+  line-height: 1.1;
+}
+
+.text-highlight {
+  background: linear-gradient(135deg, var(--accent-gold), var(--accent-copper));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.why-subtitle {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.6);
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* =========================================
+   CARTE GLASS (DESIGN ÉPURÉ)
+   ========================================= */
+.why-card-glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 20px;
+  overflow: hidden;
+  height: 100%;
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Effet Hover */
+.why-card-glass:hover {
+  transform: translateY(-8px);
+  border-color: rgba(176, 125, 82, 0.3);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+  background: rgba(30, 41, 59, 0.6);
+}
+
+/* Shine Effect */
+.shine-effect {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.05), transparent);
+  transform: skewX(-25deg);
+  transition: 0.8s;
+  pointer-events: none;
+}
+
+.why-card-glass:hover .shine-effect {
+  left: 150%;
+}
+
+.card-body {
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Icône en haut (Sans numéro) */
+.card-icon-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.card-icon-badge {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-copper);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.why-card-glass:hover .card-icon-badge {
+  background: var(--accent-copper);
+  color: white;
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(176, 125, 82, 0.3);
+}
+
+.card-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, var(--glass-border), transparent);
+}
+
+/* Textes */
+.card-title {
+  font-family: 'Times New Roman', serif;
+  font-size: 1.5rem;
+  color: var(--text-white);
+  margin-bottom: 15px;
+  line-height: 1.3;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: var(--text-grey);
+  line-height: 1.7;
+}
+
+.why-card-glass:hover .card-text {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* =========================================
+   GRID DESKTOP
+   ========================================= */
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+/* =========================================
+   MOBILE CAROUSEL
+   ========================================= */
+.why-mobile-slider {
+  position: relative;
+  width: 100%;
+  max-width: 380px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.slider-track {
+  width: 100%;
+  min-height: 350px;
+  position: relative;
+}
+
+.slider-card-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.slider-pagination {
+  display: flex;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.pagination-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.pagination-dot.active {
+  background: var(--accent-gold);
+  width: 24px;
+  border-radius: 4px;
+}
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+@media (max-width: 900px) {
+  .why-section-wrapper {
+    padding: 80px 0;
+  }
+
+  .why-header {
+    margin-bottom: 40px;
+  }
+
+  .why-title {
+    font-size: 2.5rem;
+  }
+
+  .blob-1 {
+    width: 300px;
+    height: 300px;
+    opacity: 0.25;
+  }
+
+  .blob-2 {
+    width: 200px;
+    height: 200px;
+    opacity: 0.25;
+  }
+
+  /* Ajustements Mobile Card */
+  .why-card-glass {
+    padding: 0;
+    border-radius: 16px;
+  }
+
+  .card-body {
+    padding: 30px 25px;
+  }
+}

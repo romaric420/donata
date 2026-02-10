@@ -1,0 +1,192 @@
+/* --- VARIABLES --- */
+:root {
+  --c-navy-deep: #050a14;
+  --c-copper: #b07d52;
+  --c-gold: #e9c062;
+  --c-white: #ffffff;
+}
+
+/* ============================================
+   FOOTER LUXE - FINAL
+   ============================================ */
+
+.footer {
+  position: relative;
+  background-color: var(--c-navy-deep);
+  border-top: 1px solid rgba(176, 125, 82, 0.3);
+  padding: 30px 0;
+  overflow: hidden;
+  z-index: 10;
+  min-height: 120px;
+  display: flex;
+  align-items: center;
+}
+
+/* --- BACKGROUND IMAGE 3D FLOUTÉE --- */
+.footer__bg-image {
+  position: absolute;
+  inset: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.25;
+  /* Visibilité de l'or */
+  mix-blend-mode: plus-lighter;
+  pointer-events: none;
+  z-index: 0;
+  transform: scale(1.1);
+  /* Zoom léger */
+
+  /* --- AJOUT DU FLOU ICI --- */
+  filter: blur(8px);
+}
+
+/* Dégradé pour la lisibilité */
+.footer__overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(5, 10, 20, 0.5) 0%, rgba(5, 10, 20, 0.95) 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* --- CONTENU --- */
+.footer__container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* 1. GAUCHE : LOGO */
+.footer__brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(5, 10, 20, 0.6);
+  padding: 8px 16px;
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(5px);
+}
+
+.footer__logo-icon {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--c-gold);
+  border-radius: 4px;
+  background: linear-gradient(135deg, var(--c-copper), var(--c-gold));
+}
+
+.footer__logo-icon span {
+  font-family: 'Times New Roman', serif;
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--c-navy-deep);
+}
+
+.footer__logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.brand-name {
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: var(--c-white);
+  letter-spacing: 0.5px;
+}
+
+.brand-sub {
+  font-size: 0.55rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--c-gold);
+}
+
+/* 2. CENTRE : COPYRIGHT */
+.footer__center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.footer__copyright {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.6);
+  letter-spacing: 0.5px;
+}
+
+/* 3. DROITE : LOCATION */
+.footer__location {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(5, 10, 20, 0.6);
+  padding: 8px 16px;
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(5px);
+}
+
+.location-icon-box {
+  color: var(--c-gold);
+  display: flex;
+  align-items: center;
+  filter: drop-shadow(0 0 5px rgba(233, 192, 98, 0.4));
+}
+
+.location-text {
+  font-size: 0.8rem;
+  color: var(--c-white);
+  font-weight: 500;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+  .footer {
+    padding: 40px 0;
+  }
+
+  .footer__container {
+    flex-direction: column;
+    gap: 24px;
+    text-align: center;
+  }
+
+  .footer__bg-image {
+    opacity: 0.2;
+    background-size: cover;
+  }
+
+  .footer__center {
+    position: static;
+    transform: none;
+    order: 3;
+  }
+
+  .footer__brand {
+    order: 1;
+    background: transparent;
+    border: none;
+    padding: 0;
+  }
+
+  .footer__location {
+    order: 2;
+    background: transparent;
+    border: none;
+    padding: 0;
+  }
+}

@@ -1,0 +1,223 @@
+{
+  "nav": {
+    "why": "WHY DONOTA",
+    "services": "OUR SERVICES",
+    "track": "TRACK RECORD",
+    "contact": "LET'S GET IN TOUCH"
+  },
+  "hero": {
+    "badge": "Luxury CRM Excellence",
+    "title": "Turning ambitious CRM visions into",
+    "titleHighlight": "governed, scalable reality",
+    "subtitle": "Advising luxury and premium retailers through high-stakes CRM and clienteling transformations.",
+    "cta": "Explore Our Services",
+    "ctaSecondary": "Get In Touch",
+    "scroll": "Scroll"
+  },
+  "whatWeDo": {
+    "title": "A disciplined approach to complex",
+    "titleHighlight": "CRM transformation",
+    "subtitle": "From executive vision to global rollout, DONOTA provides independent advisory support across the full lifecycle of CRM and clienteling programs.",
+    "cta": "Explore Our Services"
+  },
+  "expertiseScroller": {
+    "texts": [
+      "Turning CRM vision into measurable luxury retail impact",
+      "Where Salesforce governance meets brand excellence",
+      "Beyond go-live: building programs that deliver lasting value",
+      "From executive ambition to global multi-market rollout"
+    ]
+  },
+  "services": {
+    "title": "Our Services",
+    "description": "From executive vision to global rollout, DONOTA provides independent advisory support across the full lifecycle of CRM and clienteling programs.",
+    "cta": "Discuss Your Transformation",
+    "closing": "DONOTA's advisory support is always tailored to the maturity, ambition, and risk profile of each organization. We engage selectively, where our experience and independence can create the most value.",
+    "items": [
+      {
+        "title": "Executive CRM Vision & Strategy",
+        "description": "We support executive teams in defining a clear CRM and clienteling vision aligned with business ambition, brand identity, and operational reality — particularly in environments where ambition outpaces structure.",
+        "features": [
+          "Executive alignment on CRM purpose and success criteria",
+          "Clienteling model definition and target operating model",
+          "Multi-year roadmap prioritization, including relevant AI-enabled use cases, and sequencing",
+          "Vendor and platform positioning"
+        ]
+      },
+      {
+        "title": "Transformation Oversight & Delivery Assurance",
+        "description": "We provide independent oversight to ensure CRM programs remain structured, governed, and on track throughout delivery.",
+        "features": [
+          "Program structuring and delivery model definition",
+          "Executive steering and decision facilitation",
+          "Vendor orchestration and risk management",
+          "Milestone validation and escalation support"
+        ],
+        "note": "Particularly relevant when multiple vendors, markets, or brands are involved."
+      },
+      {
+        "title": "Adoption & Clienteling Enablement",
+        "description": "We focus on the conditions required for CRM and clienteling programs to be adopted and sustained by retail and head-office teams. Typically when technology is delivered but usage and business impact remain uncertain.",
+        "features": [
+          "Adoption and change strategy definition",
+          "Retail, digital, and HQ stakeholder alignment",
+          "Market rollout governance and coordination",
+          "Post-go-live adoption tracking"
+        ]
+      },
+      {
+        "title": "Global Program Governance",
+        "description": "We design and reinforce governance structures that support clarity, accountability, and effective decision-making at scale; relevant when programs span regions, functions, or executive sponsors.",
+        "features": [
+          "Governance model design across regions and brands",
+          "Roles, responsibilities, and decision rights definition",
+          "Steering cadence and escalation frameworks",
+          "Executive-level reporting and transparency"
+        ],
+        "optional": true
+      },
+      {
+        "title": "Run Stabilization & Optimization",
+        "description": "We support organizations in stabilizing and optimizing CRM platforms after go-live to protect business continuity and long-term value. De-risking sustainability after the initial rollout is our priority.",
+        "features": [
+          "Post-go-live stabilization governance",
+          "Operational handover and support model clarification",
+          "Continuous improvement prioritization, including the progressive enablement of relevant AI-driven capabilities once platform stability is achieved"
+        ]
+      }
+    ]
+  },
+  "trackRecord": {
+    "title": "Track Record",
+    "subtitle": "A track record built in complex, high-visibility environments.",
+    "description": "DONOTA's experience spans global CRM and clienteling programs delivered for leading luxury and premium brands, often across multiple markets, stakeholders, and transformation phases.",
+    "caseTitle": "Selected Case Snapshots",
+    "outcomesTitle": "Outcomes & Scale",
+    "outcomesSubtitle": "A synthesis of experience across complex CRM and clienteling programs.",
+    "closing": "These outcomes are the result of disciplined advisory involvement at critical moments of CRM transformation.",
+    "cta": "Discuss Your Context",
+    "cases": [
+      {
+        "company": "Christian Dior Couture",
+        "industry": "Global luxury retail — CRM transformation",
+        "role": "Program Director",
+        "focus": [
+          "Structuring and governing a large-scale Salesforce CRM transformation",
+          "Executive steering, communication, and decision orchestration",
+          "Vendor and stakeholder coordination across regions"
+        ],
+        "outcome": "Established a robust governance framework enabling the secure rollout of a new Salesforce platform in China, ensuring business continuity in a high-risk environment."
+      },
+      {
+        "company": "Christian Louboutin",
+        "industry": "Global luxury retail — Clienteling transformation",
+        "role": "Clienteling Program Lead",
+        "focus": [
+          "Clienteling vision and discovery phase leadership",
+          "Alignment between executive stakeholders, business, IT, and integrators",
+          "Change and adoption strategy definition"
+        ],
+        "outcome": "Co-designed a highly branded clienteling solution with retail teams, enabling strong adoption from the earliest stages of rollout."
+      },
+      {
+        "company": "Cartier",
+        "industry": "Global luxury retail — CRM run & product stabilization",
+        "role": "Run & Product Advisory Lead",
+        "focus": [
+          "Transition from project delivery to product-oriented operating model",
+          "Stakeholder alignment around roadmap, delivery cadence, and budget",
+          "Oversight of platform stabilization and feature delivery"
+        ],
+        "outcome": "Stabilized the CRM platform and restored adoption by improving product quality and establishing disciplined ways of working."
+      }
+    ],
+    "outcomes": [
+      {
+        "title": "Secured delivery in high-risk environments",
+        "description": "CRM programs stabilized and delivered in contexts where business continuity, market exposure, and executive visibility were critical.",
+        "detail": "Multi-region programs, sensitive market rollouts, and complex vendor ecosystems."
+      },
+      {
+        "title": "Adoption driven at scale",
+        "description": "Clienteling and CRM solutions designed and governed to ensure early adoption and sustained usage across retail and head-office teams.",
+        "detail": "Global retail networks, diverse market maturities, and demanding brand standards."
+      },
+      {
+        "title": "Governance that enables clarity",
+        "description": "Decision-making structures established to align executives, regions, and partners around shared priorities and accountable delivery.",
+        "detail": "Programs spanning multiple brands, functions, and leadership layers."
+      },
+      {
+        "title": "Sustainable post–go-live performance",
+        "description": "CRM platforms stabilized and transitioned into product-oriented operating models to protect long-term value.",
+        "detail": "Enterprise CRM platforms with continuous evolution requirements."
+      }
+    ]
+  },
+  "whyDonota": {
+    "title": "Why",
+    "titleHighlight": "DONOTA",
+    "subtitle": "Experience, independence, and a disciplined approach to transformation",
+    "badge": "Our Approach",
+    "reasons": [
+      {
+        "number": "01",
+        "title": "Our Unique Point of View",
+        "description": "CRM transformation is more than technology; it's a strategic enabler of business growth. Success comes from aligning people, data, governance, and measurable outcomes. At DONOTA Advisory, our experience with global luxury brands has taught us how to design programs that deliver real business impact, not just system rollouts."
+      },
+      {
+        "number": "02",
+        "title": "What We Stand For",
+        "description": "We stand for disciplined execution, independent guidance, and measurable results. Our teams ensure data integrity, executive alignment, and adoption by the people who matter, so every program creates lasting value across markets."
+      },
+      {
+        "number": "03",
+        "title": "How We Create Impact",
+        "description": "We translate strategy into results: Ensuring trusted, high-quality data for confident decisions; Driving adoption and engagement across teams; Enforcing structured governance to sustain value; Aligning initiatives with local market realities; and delivering measurable business impact well beyond go-live."
+      },
+      {
+        "number": "04",
+        "title": "Who We Work With",
+        "description": "We partner with ambitious retail brands navigating complex CRM and clienteling transformations. Our clients value independent guidance, disciplined governance, and adoption-focused programs that deliver measurable, long-lasting results, whether they operate locally or across multiple markets."
+      }
+    ]
+  },
+  "about": {
+    "name": "Vida Tokodi, PMP®",
+    "experienceBadge": "9+ Years Experience",
+    "role": "Luxury Clienteling & CRM Transformation Director | Salesforce Programs | EMEA, Middle East & Asia",
+    "paragraphs": [
+      "Program Director specializing in luxury clienteling and CRM transformation programs, with 9+ years of experience delivering high-impact Salesforce initiatives for leading maisons including Christian Dior Couture, Cartier, Louboutin, and Van Cleef & Arpels.",
+      "I lead complex, multi-country programs where data, sales associate adoption, governance, and business outcomes must align — managing multimillion-euro portfolios and large international teams to deliver measurable improvements in client engagement and retail performance.",
+      "My expertise sits at the intersection of Salesforce CRM, luxury retail operations, and program governance, with a strong focus on adoption, change management, and sustainable value creation beyond go-live."
+    ],
+    "location": "Now based in Dubai, I advise and lead luxury and premium retail organizations across the Middle East on clienteling strategy, CRM transformation, and large-scale program delivery.",
+    "credentials": "PMP®, Scrum Master & Salesforce Certified Administrator | French & English | Design Thinking & Digital Transformation",
+    "linkedinLabel": "Connect on LinkedIn"
+  },
+  "contact": {
+    "title": "Let's Get",
+    "titleHighlight": "In Touch",
+    "subtitle": "Ready to elevate your CRM strategy?",
+    "description": "Whether you're launching a new Clienteling initiative or refining an existing program, Donota Advisory partners with you to unlock real impact and achieve measurable results. Let's start the conversation.",
+    "formTitle": "Quick Contact",
+    "namePlaceholder": "Your name",
+    "emailPlaceholder": "your@email.com",
+    "phonePlaceholder": "+000 00 000 0000",
+    "messagePlaceholder": "Tell us about your project...",
+    "sendButton": "Send Message",
+    "successMessage": "Message sent successfully!",
+    "qrTitle": "Scan to connect",
+    "qrSubtitle": "Scan this QR code to save my business card",
+    "mobileButton": "Tap to Save My Business Card",
+    "linkedinTitle": "Connect on LinkedIn",
+    "linkedinButton": "Visit LinkedIn Profile",
+    "location": "Based in Dubai · Serving luxury and industry leaders worldwide"
+  },
+  "footer": {
+    "description": "Advising luxury and premium retailers through high-stakes CRM and clienteling transformations in Dubai, Middle East, and Europe.",
+    "location": "Based in Dubai, UAE",
+    "copyright": "DONOTA Advisory. All rights reserved."
+  },
+  "scrollToTop": "Back to top"
+}

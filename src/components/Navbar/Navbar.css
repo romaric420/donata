@@ -1,0 +1,374 @@
+/* --- PALETTE & VARIABLES --- */
+:root {
+  --c-copper: #b07d52;
+  --c-copper-light: #c4956a;
+  --c-gold: #e9c062;
+  /* Pour la brillance */
+  --c-navy: #3a577d;
+  --c-navy-dark: #0f1b2d;
+  --c-white: #ffffff;
+  --c-sand: #ddd0c0;
+
+  --nav-height: 90px;
+  --nav-height-scrolled: 70px;
+  --z-nav: 1000;
+  --z-overlay: 1050;
+}
+
+/* --- STRUCTURE --- */
+.nav-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--nav-height);
+  z-index: var(--z-nav);
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  background: transparent;
+  width: 100%;
+}
+
+.nav-wrapper.scrolled {
+  height: var(--nav-height-scrolled);
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(176, 125, 82, 0.15);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.nav-container {
+  max-width: 1400px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+/* --- 1. LOGO (GAUCHE) --- */
+.nav-logo-block {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1100;
+  text-decoration: none;
+}
+
+/* LE "D" EST MAINTENANT BRILLANT (Gradient + Shadow) */
+.logo-d {
+  font-family: 'Times New Roman', serif;
+  font-size: 2.4rem;
+  /* Un peu plus grand */
+  font-weight: 700;
+  line-height: 1;
+
+  /* Effet Or/Cuivre Métallique */
+  background: linear-gradient(135deg, var(--c-copper) 0%, var(--c-gold) 50%, var(--c-copper) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+
+  /* Petite lueur */
+  filter: drop-shadow(0 2px 4px rgba(176, 125, 82, 0.3));
+}
+
+.logo-text-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1;
+}
+
+.logo-main {
+  font-size: 1.1rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: var(--c-white);
+  transition: color 0.3s ease;
+}
+
+.logo-sub {
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: var(--c-sand);
+  text-transform: uppercase;
+}
+
+.scrolled .logo-main {
+  color: var(--c-navy-dark);
+}
+
+.scrolled .logo-sub {
+  color: var(--c-navy);
+}
+
+
+/* --- 2. MENU DESKTOP (CENTRÉ ABSOLU) --- */
+.nav-links-desktop {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  gap: 40px;
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .nav-links-desktop {
+    display: flex;
+  }
+}
+
+.nav-link {
+  background: none;
+  border: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--c-white);
+  cursor: pointer;
+  position: relative;
+  transition: color 0.3s ease;
+  padding: 5px 0;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--c-copper);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.scrolled .nav-link {
+  color: var(--c-navy-dark);
+}
+
+.scrolled .nav-link:hover {
+  color: var(--c-copper);
+}
+
+
+/* --- 3. ACTIONS (DROITE) --- */
+.nav-right-side {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  min-width: 80px;
+}
+
+/* TOGGLE LANGUE (Desktop) */
+.lang-toggle-pill {
+  display: none;
+  position: relative;
+  width: 80px;
+  /* Un peu plus grand */
+  height: 36px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4px;
+  transition: all 0.3s ease;
+}
+
+@media (min-width: 1024px) {
+  .lang-toggle-pill {
+    display: flex;
+  }
+}
+
+/* Le fond qui bouge (Slider) */
+.toggle-slider {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 36px;
+  /* Moitié moins le padding */
+  height: 28px;
+  background: var(--c-copper);
+  border-radius: 50px;
+  transition: transform 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+  z-index: 1;
+}
+
+/* Quand c'est FR, on bouge à droite */
+.toggle-slider.right {
+  transform: translateX(36px);
+}
+
+/* Textes EN / FR */
+.lang-text {
+  width: 50%;
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  z-index: 2;
+  /* Au dessus du slider */
+  color: var(--c-white);
+  transition: color 0.3s;
+  user-select: none;
+}
+
+/* Le texte non sélectionné devient un peu transparent */
+.lang-text.inactive {
+  opacity: 0.5;
+}
+
+/* Style du Toggle quand on scroll (Fond blanc) */
+.scrolled .lang-toggle-pill {
+  background: transparent;
+  border-color: var(--c-navy-dark);
+}
+
+.scrolled .lang-text {
+  color: var(--c-navy-dark);
+}
+
+.scrolled .lang-text.active {
+  color: var(--c-white);
+}
+
+/* Le texte sur le slider reste blanc */
+
+
+/* BURGER ICON (Mobile) */
+.burger-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+@media (min-width: 1024px) {
+  .burger-btn {
+    display: none;
+  }
+}
+
+.burger-line {
+  width: 100%;
+  height: 2px;
+  background: var(--c-white);
+  transition: background 0.3s;
+}
+
+.scrolled .burger-line {
+  background: var(--c-navy-dark);
+}
+
+
+/* --- MOBILE MENU FULLSCREEN --- */
+.mobile-overlay {
+  position: fixed;
+  inset: 0;
+  background: var(--c-navy-dark);
+  z-index: var(--z-overlay);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Croix de fermeture */
+.close-btn-mobile {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: none;
+  color: var(--c-white);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.close-btn-mobile:hover {
+  border-color: var(--c-copper);
+  color: var(--c-copper);
+  transform: rotate(90deg);
+}
+
+.mobile-nav-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+}
+
+.mobile-link {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--c-white);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.mobile-link:hover {
+  color: var(--c-copper);
+}
+
+/* Langue Mobile (Texte simple) */
+.lang-mobile-wrapper {
+  margin-top: 50px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  width: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.lang-mobile-btn {
+  background: none;
+  border: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--c-white);
+  opacity: 0.4;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.lang-mobile-btn.active {
+  opacity: 1;
+  color: var(--c-copper);
+}
+
+.lang-separator {
+  color: rgba(255, 255, 255, 0.2);
+}
