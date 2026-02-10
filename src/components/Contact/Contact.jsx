@@ -4,7 +4,7 @@ import { useLanguage } from '../../contexts/LanguageContext'
 import './Contact.css'
 
 const Contact = () => {
-  const { t, linkedinUrl } = useLanguage()
+  const { t } = useLanguage()
   const [loading, setLoading] = useState(false)
   const [status, setStatus] = useState(null)
   const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY?.trim()
@@ -31,7 +31,7 @@ const Contact = () => {
 
     const formData = new FormData(event.target)
     formData.append('access_key', accessKey)
-    formData.append('source_site', 'CONTACT_DUBAI')
+    formData.append('source_site', 'donota-advisory')
 
     try {
       const response = await fetch('https://api.web3forms.com/submit', {
@@ -98,7 +98,7 @@ const Contact = () => {
             {/* GAUCHE : FORMULAIRE */}
             <div className="form-column">
               <h3 className="form-title">{t.contact.formTitle}</h3>
-              <form onSubmit={handleSubmit} className="contact-form">
+              <form id="contact-form" onSubmit={handleSubmit} className="contact-form">
                 {/* Nom */}
                 <div className="floating-field">
                   <input
@@ -131,6 +131,9 @@ const Contact = () => {
                     type="tel"
                     name="phone"
                     placeholder=" "
+                    required
+                    pattern="[0-9+\s\-\(\)\.]{10,20}"
+                    title="Veuillez entrer un numéro de téléphone valide (10-20 caractères)"
                     className="floating-input"
                   />
                   <label className="floating-label">{t.contact.phonePlaceholder}</label>
@@ -214,7 +217,7 @@ const Contact = () => {
 
               {/* Bouton Mobile */}
               <div className="mobile-btn-wrapper">
-                <a href="#" className="mobile-btn">
+                <a href="#contact-form" className="mobile-btn">
                   {t.contact.mobileButton}
                 </a>
               </div>
@@ -223,8 +226,9 @@ const Contact = () => {
 
               <div className="linkedin-wrapper">
                 <p className="linkedin-label">{t.contact.linkedinTitle}</p>
+
                 <a
-                  href={linkedinUrl}
+                  href="https://www.linkedin.com/in/vida-tokodi-pmp%C2%AE-3345981a1"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="linkedin-btn"

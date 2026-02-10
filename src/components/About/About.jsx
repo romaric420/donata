@@ -4,7 +4,7 @@ import { useLanguage } from '../../contexts/LanguageContext'
 import './About.css'
 
 const About = () => {
-  const { t, linkedinUrl } = useLanguage()
+  const { t } = useLanguage()
   const [isOpen, setIsOpen] = useState(false)
 
   const profileImage = "https://media.licdn.com/dms/image/v2/D4E03AQEAMPE9l5ID2g/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1731332321687?e=1772064000&v=beta&t=QFY2FlUpAaB5_OWZRnPaXCRKeFX5LuYlh9WO8SbO1nA"
@@ -132,7 +132,12 @@ const About = () => {
 
                   <div className="modal-footer-section">
                     <span className="credentials">{t.about.credentials}</span>
-                    <a href={linkedinUrl} target="_blank" rel="noopener noreferrer" className="modal-linkedin-btn">
+                    <a
+                      href="https://www.linkedin.com/in/vida-tokodi-pmp%C2%AE-3345981a1"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="modal-linkedin-btn"
+                    >
                       LinkedIn Profile
                     </a>
                   </div>
