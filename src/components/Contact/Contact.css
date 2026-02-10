@@ -398,3 +398,54 @@
     text-decoration: none;
   }
 }
+
+/* --- QR IMAGE STYLE --- */
+.qr-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* --- RESPONSIVE LOGIC --- */
+@media (max-width: 850px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-column {
+    border-right: none;
+    border-bottom: 1px solid var(--c-border);
+  }
+
+  /* Cache le QR scan sur mobile (inutile de scanner son propre écran) */
+  .qr-wrapper {
+    display: none;
+  }
+
+  /* Affiche le bouton "Tap to Save" */
+  .mobile-btn-wrapper {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .mobile-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 24px;
+    background: linear-gradient(135deg, var(--c-copper), var(--c-gold));
+    color: white !important;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-decoration: none;
+    box-shadow: 0 10px 20px rgba(176, 125, 82, 0.3);
+    transition: transform 0.2s;
+  }
+
+  .mobile-btn:active {
+    transform: scale(0.98);
+  }
+}
