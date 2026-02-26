@@ -1,7 +1,7 @@
 {
   "nav": {
     "why": "WHY DONOTA",
-    "services": "OUR SERVICES",
+    "services": "OUR ENGAGEMENT MODELS",
     "track": "TRACK RECORD",
     "contact": "LET'S GET IN TOUCH"
   },
@@ -18,7 +18,7 @@
     "title": "A disciplined approach to complex",
     "titleHighlight": "CRM transformation",
     "subtitle": "From executive vision to global rollout, DONOTA provides independent advisory support across the full lifecycle of CRM and clienteling programs.",
-    "cta": "Explore Our Services"
+    "cta": "Explore Our Engagement Models"
   },
   "expertiseScroller": {
     "texts": [
@@ -29,61 +29,51 @@
     ]
   },
   "services": {
-    "title": "Our Services",
-    "description": "From executive vision to global rollout, DONOTA provides independent advisory support across the full lifecycle of CRM and clienteling programs.",
+    "title": "Our Engagement Models",
+    "description": "A disciplined approach to complex CRM transformation. From executive vision to global rollout, DONOTA provides independent advisory support across the full lifecycle of CRM and clienteling programs.",
     "cta": "Discuss Your Transformation",
-    "closing": "DONOTA's advisory support is always tailored to the maturity, ambition, and risk profile of each organization. We engage selectively, where our experience and independence can create the most value.",
+    "closing": "Whether building from the ground up or elevating an existing ecosystem, we ensure clienteling becomes a strategic growth driver — not just a system.",
     "items": [
       {
-        "title": "Executive CRM Vision & Strategy",
-        "description": "We support executive teams in defining a clear CRM and clienteling vision aligned with business ambition, brand identity, and operational reality — particularly in environments where ambition outpaces structure.",
-        "features": [
-          "Executive alignment on CRM purpose and success criteria",
-          "Clienteling model definition and target operating model",
-          "Multi-year roadmap prioritization, including relevant AI-enabled use cases, and sequencing",
-          "Vendor and platform positioning"
-        ]
-      },
-      {
-        "title": "Transformation Oversight & Delivery Assurance",
-        "description": "We provide independent oversight to ensure CRM programs remain structured, governed, and on track throughout delivery.",
-        "features": [
-          "Program structuring and delivery model definition",
-          "Executive steering and decision facilitation",
-          "Vendor orchestration and risk management",
-          "Milestone validation and escalation support"
+        "number": "1",
+        "title": "Clienteling Strategy, Architecture & Launch",
+        "for": "For Early-Stage or Structuring Brands",
+        "paragraphs": [
+          "Luxury brands expanding in the GCC often recognize the strategic importance of clienteling — yet lack a structured ecosystem to support it.",
+          "We partner with maisons at an early or defining stage to architect and lead the full deployment of their clienteling program.",
+          "From strategic definition to regional roll-out, we ensure that every decision — governance, data, technology, adoption, KPIs — is aligned with brand excellence and measurable performance."
         ],
-        "note": "Particularly relevant when multiple vendors, markets, or brands are involved."
-      },
-      {
-        "title": "Adoption & Clienteling Enablement",
-        "description": "We focus on the conditions required for CRM and clienteling programs to be adopted and sustained by retail and head-office teams. Typically when technology is delivered but usage and business impact remain uncertain.",
+        "mandateTitle": "Our mandate typically includes:",
         "features": [
-          "Adoption and change strategy definition",
-          "Retail, digital, and HQ stakeholder alignment",
-          "Market rollout governance and coordination",
-          "Post-go-live adoption tracking"
-        ]
-      },
-      {
-        "title": "Global Program Governance",
-        "description": "We design and reinforce governance structures that support clarity, accountability, and effective decision-making at scale; relevant when programs span regions, functions, or executive sponsors.",
-        "features": [
-          "Governance model design across regions and brands",
-          "Roles, responsibilities, and decision rights definition",
-          "Steering cadence and escalation frameworks",
-          "Executive-level reporting and transparency"
+          "Clienteling strategy definition aligned with regional ambitions",
+          "Target operating model and governance framework",
+          "CRM solution scoping (including Salesforce ecosystems)",
+          "Implementation leadership across business and technology teams",
+          "Structured roll-out and boutique activation",
+          "KPI framework and performance monitoring"
         ],
-        "optional": true
+        "outcome": "A scalable, governance-driven, and adoption-focused clienteling ecosystem designed to perform across the GCC."
       },
       {
-        "title": "Run Stabilization & Optimization",
-        "description": "We support organizations in stabilizing and optimizing CRM platforms after go-live to protect business continuity and long-term value. De-risking sustainability after the initial rollout is our priority.",
+        "number": "2",
+        "title": "Clienteling Optimization & Acceleration",
+        "for": "For Advanced Brands Seeking Performance Impact",
+        "paragraphs": [
+          "Many luxury brands have already invested in clienteling platforms — yet struggle with adoption, alignment, or measurable ROI.",
+          "We intervene to stabilize, optimize, and accelerate existing programs.",
+          "Our approach begins with a structured executive diagnostic across our five pillars: data efficiency, adoption, governance, compliance, and measurable KPIs.",
+          "We then define a clear, prioritized roadmap and lead the transformation to restore confidence and performance."
+        ],
+        "mandateTitle": "Our mandate typically includes:",
         "features": [
-          "Post-go-live stabilization governance",
-          "Operational handover and support model clarification",
-          "Continuous improvement prioritization, including the progressive enablement of relevant AI-driven capabilities once platform stability is achieved"
-        ]
+          "Executive-level maturity assessment",
+          "Adoption and boutique engagement analysis",
+          "Governance and accountability clarification",
+          "Data quality and KPI framework review",
+          "Enhancement roadmap definition",
+          "Hands-on transformation leadership"
+        ],
+        "outcome": "Renewed clarity at leadership level, stronger sales associate adoption, and a clienteling program that delivers measurable commercial impact."
       }
     ]
   },
@@ -193,7 +183,8 @@
     ],
     "location": "Now based in Dubai, I advise and lead luxury and premium retail organizations across the Middle East on clienteling strategy, CRM transformation, and large-scale program delivery.",
     "credentials": "PMP®, Scrum Master & Salesforce Certified Administrator | French & English | Design Thinking & Digital Transformation",
-    "linkedinLabel": "Connect on LinkedIn"
+    "linkedinLabel": "Connect on LinkedIn",
+    "readMore": "Learn more"
   },
   "contact": {
     "title": "Let's Get",

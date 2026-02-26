@@ -25,9 +25,9 @@
 }
 
 .whatwedo__subtitle {
-  font-size: clamp(0.95rem, 1.5vw, 1.125rem);
+  font-size: clamp(1.05rem, 1.8vw, 1.3rem);
   line-height: 1.7;
   color: #64748b;
-  max-width: 640px;
+  max-width: 680px;
   margin: 0 auto 40px;
 }

@@ -1,7 +1,7 @@
 {
   "nav": {
     "why": "POURQUOI DONOTA",
-    "services": "NOS SERVICES",
+    "services": "NOS MODÈLES D'ENGAGEMENT",
     "track": "RÉFÉRENCES",
     "contact": "NOUS CONTACTER"
   },
@@ -18,7 +18,7 @@
     "title": "Une approche rigoureuse de la",
     "titleHighlight": "transformation CRM",
     "subtitle": "De la vision stratégique au déploiement mondial, DONOTA fournit un accompagnement conseil indépendant sur l'ensemble du cycle de vie des programmes CRM et clienteling.",
-    "cta": "Découvrir nos services"
+    "cta": "Découvrir nos modèles d'engagement"
   },
   "expertiseScroller": {
     "texts": [
@@ -29,61 +29,51 @@
     ]
   },
   "services": {
-    "title": "Nos Services",
-    "description": "De la vision stratégique au déploiement mondial, DONOTA fournit un accompagnement conseil indépendant sur l'ensemble du cycle de vie des programmes CRM et clienteling.",
+    "title": "Nos Modèles d'Engagement",
+    "description": "Une approche rigoureuse de la transformation CRM complexe. De la vision stratégique au déploiement mondial, DONOTA fournit un accompagnement conseil indépendant sur l'ensemble du cycle de vie des programmes CRM et clienteling.",
     "cta": "Discuter de votre transformation",
-    "closing": "L'accompagnement conseil de DONOTA est toujours adapté à la maturité, à l'ambition et au profil de risque de chaque organisation. Nous intervenons de manière sélective, là où notre expérience et notre indépendance peuvent créer le plus de valeur.",
+    "closing": "Que vous construisiez depuis les fondations ou que vous élèviez un écosystème existant, nous veillons à ce que le clienteling devienne un levier de croissance stratégique — et pas seulement un système.",
     "items": [
       {
-        "title": "Vision & Stratégie CRM Executive",
-        "description": "Nous accompagnons les équipes dirigeantes dans la définition d'une vision CRM et clienteling claire, alignée avec l'ambition business, l'identité de marque et la réalité opérationnelle — notamment dans les environnements où l'ambition dépasse la structure.",
-        "features": [
-          "Alignement exécutif sur la raison d'être et les critères de succès du CRM",
-          "Définition du modèle clienteling et du modèle opérationnel cible",
-          "Priorisation du roadmap multi-annuel, incluant les cas d'usage IA pertinents, et séquençage",
-          "Positionnement éditeur et plateforme"
-        ]
-      },
-      {
-        "title": "Pilotage de Transformation & Assurance Delivery",
-        "description": "Nous fournissons un pilotage indépendant pour garantir que les programmes CRM restent structurés, gouvernés et sur la bonne trajectoire tout au long de la delivery.",
-        "features": [
-          "Structuration de programme et définition du modèle de delivery",
-          "Pilotage exécutif et facilitation des décisions",
-          "Orchestration des prestataires et gestion des risques",
-          "Validation des jalons et support à l'escalade"
+        "number": "1",
+        "title": "Stratégie Clienteling, Architecture & Lancement",
+        "for": "Pour les Marques en Phase de Structuration ou Démarrage",
+        "paragraphs": [
+          "Les marques de luxe qui s'étendent dans le CCG reconnaissent souvent l'importance stratégique du clienteling — mais manquent d'un écosystème structuré pour le soutenir.",
+          "Nous nous associons aux maisons à un stade précoce ou définissant pour concevoir et piloter le déploiement complet de leur programme clienteling.",
+          "De la définition stratégique au déploiement régional, nous nous assurons que chaque décision — gouvernance, données, technologie, adoption, KPIs — est alignée avec l'excellence de la marque et la performance mesurable."
         ],
-        "note": "Particulièrement pertinent lorsque plusieurs prestataires, marchés ou marques sont impliqués."
-      },
-      {
-        "title": "Adoption & Enablement Clienteling",
-        "description": "Nous nous concentrons sur les conditions nécessaires pour que les programmes CRM et clienteling soient adoptés et pérennisés par les équipes retail et siège. Typiquement lorsque la technologie est livrée mais que l'usage et l'impact business restent incertains.",
+        "mandateTitle": "Notre mission inclut généralement :",
         "features": [
-          "Définition de la stratégie d'adoption et de conduite du changement",
-          "Alignement des parties prenantes retail, digital et siège",
-          "Gouvernance et coordination du déploiement marché",
-          "Suivi de l'adoption post-go-live"
-        ]
-      },
-      {
-        "title": "Gouvernance de Programme Global",
-        "description": "Nous concevons et renforçons les structures de gouvernance qui soutiennent la clarté, la responsabilisation et une prise de décision efficace à grande échelle ; pertinent lorsque les programmes couvrent plusieurs régions, fonctions ou sponsors exécutifs.",
-        "features": [
-          "Conception du modèle de gouvernance inter-régions et inter-marques",
-          "Définition des rôles, responsabilités et droits décisionnels",
-          "Cadences de pilotage et cadres d'escalade",
-          "Reporting et transparence au niveau exécutif"
+          "Définition de la stratégie clienteling alignée avec les ambitions régionales",
+          "Modèle opérationnel cible et cadre de gouvernance",
+          "Cadrage de la solution CRM (y compris les écosystèmes Salesforce)",
+          "Leadership de la mise en œuvre entre équipes business et technologie",
+          "Déploiement structuré et activation des boutiques",
+          "Cadre KPI et suivi de la performance"
         ],
-        "optional": true
+        "outcome": "Un écosystème clienteling scalable, orienté gouvernance et adoption, conçu pour performer dans l'ensemble du CCG."
       },
       {
-        "title": "Stabilisation Run & Optimisation",
-        "description": "Nous accompagnons les organisations dans la stabilisation et l'optimisation des plateformes CRM après le go-live pour protéger la continuité d'activité et la valeur à long terme. La sécurisation de la pérennité après le déploiement initial est notre priorité.",
+        "number": "2",
+        "title": "Optimisation & Accélération Clienteling",
+        "for": "Pour les Marques Avancées Cherchant un Impact Performance",
+        "paragraphs": [
+          "De nombreuses marques de luxe ont déjà investi dans des plateformes clienteling — mais peinent avec l'adoption, l'alignement ou un ROI mesurable.",
+          "Nous intervenons pour stabiliser, optimiser et accélérer les programmes existants.",
+          "Notre approche commence par un diagnostic exécutif structuré autour de nos cinq piliers : efficacité des données, adoption, gouvernance, conformité et KPIs mesurables.",
+          "Nous définissons ensuite une feuille de route claire et priorisée et pilotons la transformation pour restaurer confiance et performance."
+        ],
+        "mandateTitle": "Notre mission inclut généralement :",
         "features": [
-          "Gouvernance de stabilisation post-go-live",
-          "Clarification du handover opérationnel et du modèle de support",
-          "Priorisation de l'amélioration continue, incluant l'activation progressive des capacités IA pertinentes une fois la stabilité de la plateforme atteinte"
-        ]
+          "Évaluation de maturité au niveau exécutif",
+          "Analyse d'adoption et d'engagement en boutique",
+          "Clarification de la gouvernance et des responsabilités",
+          "Revue de la qualité des données et du cadre KPI",
+          "Définition du roadmap d'amélioration",
+          "Leadership de transformation opérationnel"
+        ],
+        "outcome": "Clarté renouvelée au niveau leadership, adoption renforcée des conseillers de vente, et un programme clienteling qui génère un impact commercial mesurable."
       }
     ]
   },
@@ -194,7 +184,8 @@
     "location": "Désormais basée à Dubaï, je conseille et dirige des organisations retail luxe et premium à travers le Moyen-Orient sur la stratégie clienteling, la transformation CRM et la delivery de programmes à grande échelle.",
     "credentials": "PMP®, Scrum Master & Salesforce Certified Administrator | Français & Anglais | Design Thinking & Transformation Digitale",
     "linkedinLabel": "Se connecter sur LinkedIn",
-    "linkedinUrl": "https://www.linkedin.com/in/vida-tokodi-pmp%C2%AE-3345981a1?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+    "linkedinUrl": "https://www.linkedin.com/in/vida-tokodi-pmp%C2%AE-3345981a1?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    "readMore": "En savoir plus"
   },
   "contact": {
     "title": "Prenons",

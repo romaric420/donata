@@ -3,15 +3,21 @@ import { motion } from 'framer-motion';
 import { useLanguage } from '../../contexts/LanguageContext';
 import './TrackRecord.css';
 
-const partners = [
-  'Christian Dior Couture', 'Cartier', 'Christian Louboutin', 'Van Cleef & Arpels',
-  'Boucheron', 'Messika', 'Le Bon Marché', 'Hublot',
-  'Tag Heuer', 'Rimowa', 'Air Liquide'
+const logos = [
+  { name: 'Dior',          src: '/images/logos/Dior.PNG' },
+  { name: 'Chaumet',       src: '/images/logos/chumet.PNG' },
+  { name: 'Fred',          src: '/images/logos/fred.PNG' },
+  { name: 'Kenzo',         src: '/images/logos/kenzo.PNG' },
+  { name: 'Maxeon',        src: '/images/logos/maxeon.PNG' },
+  { name: 'Le Bon Marché', src: '/images/logos/rive.PNG' },
+  { name: 'Yana Nesper',   src: '/images/logos/yanna.PNG' },
+  { name: 'Zenith',        src: '/images/logos/zenith.PNG' },
 ];
+
+const infiniteLogos = [...logos, ...logos, ...logos];
 
 const TrackRecord = () => {
   const { t } = useLanguage();
-  const infinitePartners = [...partners, ...partners, ...partners];
 
   const reveal = {
     initial: { y: 100, opacity: 0 },
@@ -41,11 +47,13 @@ const TrackRecord = () => {
           </div>
         </header>
 
-        {/* MARQUEE : Épuré */}
+        {/* MARQUEE : Logos réels */}
         <div className="tr-marquee-wrapper">
           <div className="tr-marquee-content">
-            {infinitePartners.map((name, i) => (
-              <span key={i} className="tr-marquee-item">{name}</span>
+            {infiniteLogos.map((logo, i) => (
+              <div key={i} className="tr-marquee-logo">
+                <img src={logo.src} alt={logo.name} className="tr-marquee-img" />
+              </div>
             ))}
           </div>
         </div>
@@ -73,20 +81,48 @@ const TrackRecord = () => {
                 </div>
 
                 <div className="tr-card-footer">
-                  <div className="tr-tags">
-                    {project.focus.map((tag, j) => (
-                      <span key={j} className="tr-tag">#{tag}</span>
+                  <div className="tr-focus-list">
+                    {project.focus.map((item, j) => (
+                      <div key={j} className="tr-focus-item">
+                        <div className="tr-focus-dot" />
+                        <span>{item}</span>
+                      </div>
                     ))}
                   </div>
-                  <div className="tr-outcome-pill">
-                    <div className="tr-dot" />
-                    {project.outcome}
+                  <div className="tr-outcome-block">
+                    <span className="tr-outcome-label">Outcome</span>
+                    <p className="tr-outcome-text">{project.outcome}</p>
                   </div>
                 </div>
               </div>
               <div className="tr-card-border-effect" />
             </motion.div>
           ))}
+        </div>
+
+        {/* OUTCOMES & SCALE : 4 blocs */}
+        <div className="tr-outcomes-section">
+          <div className="tr-outcomes-header">
+            <h3 className="tr-outcomes-title">{t.trackRecord.outcomesTitle}</h3>
+            <p className="tr-outcomes-subtitle">{t.trackRecord.outcomesSubtitle}</p>
+          </div>
+          <div className="tr-outcomes-grid">
+            {t.trackRecord.outcomes.map((outcome, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.08 }}
+                className="tr-outcome-card"
+              >
+                <span className="tr-outcome-card-num">{String(i + 1).padStart(2, '0')}</span>
+                <h4 className="tr-outcome-card-title">{outcome.title}</h4>
+                <p className="tr-outcome-card-desc">{outcome.description}</p>
+                <span className="tr-outcome-card-detail">{outcome.detail}</span>
+              </motion.div>
+            ))}
+          </div>
         </div>
 
         {/* CTA : Minimaliste */}

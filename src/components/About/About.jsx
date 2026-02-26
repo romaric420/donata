@@ -7,7 +7,7 @@ const About = () => {
   const { t } = useLanguage()
   const [isOpen, setIsOpen] = useState(false)
 
-  const profileImage = "https://media.licdn.com/dms/image/v2/D4E03AQEAMPE9l5ID2g/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1731332321687?e=1772064000&v=beta&t=QFY2FlUpAaB5_OWZRnPaXCRKeFX5LuYlh9WO8SbO1nA"
+  const profileImage = "https://media.licdn.com/dms/image/v2/D4E03AQEAMPE9l5ID2g/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1731332321687?e=1773878400&v=beta&t=Y0X7YCOYogajfPwz4leSLxkWcKTbEztyWgjMFrs6P1Y"
 
   useEffect(() => {
     if (isOpen) document.body.style.overflow = 'hidden'
@@ -69,7 +69,7 @@ const About = () => {
 
             <motion.div variants={fadeInUp} className="btn-wrapper">
               <button onClick={() => setIsOpen(true)} className="btn-read-more">
-                <span>{t.about.readMore || "En savoir plus"}</span>
+                <span>{t.about.readMore}</span>
                 <div className="btn-arrow">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
                 </div>
