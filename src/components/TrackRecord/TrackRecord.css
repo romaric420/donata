@@ -75,8 +75,6 @@
 /* --- MARQUEE LOGOS --- */
 .tr-marquee-wrapper {
   margin: 0 -40px 100px;
-  border-top: 1px solid var(--tr-border);
-  border-bottom: 1px solid var(--tr-border);
   padding: 28px 0;
   overflow: hidden;
   display: flex;
@@ -97,10 +95,18 @@
 }
 
 .tr-marquee-img {
-  height: 36px;
+  height: 70px;
   width: auto;
-  max-width: 140px;
+  max-width: 220px;
   object-fit: contain;
+  background-color: #ffffff;
+  padding: 6px 12px;
+  border-radius: 4px;
+}
+
+.tr-marquee-img--large {
+  height: 100px;
+  max-width: 300px;
 }
 
 /* --- CASE SNAPSHOTS GRID (clean equal 3-column layout) --- */

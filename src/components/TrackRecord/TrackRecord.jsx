@@ -4,14 +4,19 @@ import { useLanguage } from '../../contexts/LanguageContext';
 import './TrackRecord.css';
 
 const logos = [
-  { name: 'Dior',          src: '/images/logos/Dior.PNG' },
-  { name: 'Chaumet',       src: '/images/logos/chumet.PNG' },
-  { name: 'Fred',          src: '/images/logos/fred.PNG' },
-  { name: 'Kenzo',         src: '/images/logos/kenzo.PNG' },
-  { name: 'Maxeon',        src: '/images/logos/maxeon.PNG' },
-  { name: 'Le Bon Marché', src: '/images/logos/rive.PNG' },
-  { name: 'Yana Nesper',   src: '/images/logos/yanna.PNG' },
-  { name: 'Zenith',        src: '/images/logos/zenith.PNG' },
+  { name: 'Dior',                 src: '/images/logos/Dior.PNG' },
+  { name: 'Cartier',              src: '/images/logos/cqrtier.PNG' },
+  { name: 'Givenchy',             src: '/images/logos/Givenchy.png' },
+  { name: 'Hublot',               src: '/images/logos/hublot.PNG' },
+  { name: 'Messika',              src: '/images/logos/Messika.png' },
+  { name: 'Tag Heuer',            src: '/images/logos/Tag Heuer.png' },
+  { name: 'Van Cleef & Arpels',   src: '/images/logos/van.PNG',                    large: true },
+  { name: 'Zenith',               src: '/images/logos/Zenith.png' },
+  { name: 'Air Liquide',          src: '/images/logos/air.PNG' },
+  { name: 'Boucheron',            src: '/images/logos/boucheron.PNG',              large: true },
+  { name: 'Christian Louboutin',  src: '/images/logos/christian louboutin.png',   large: true },
+  { name: 'Le Bon Marché',        src: '/images/logos/le bon marche.png' },
+  { name: 'Rimowa',               src: '/images/logos/rimowa logo.png' },
 ];
 
 const infiniteLogos = [...logos, ...logos, ...logos];
@@ -52,7 +57,7 @@ const TrackRecord = () => {
           <div className="tr-marquee-content">
             {infiniteLogos.map((logo, i) => (
               <div key={i} className="tr-marquee-logo">
-                <img src={logo.src} alt={logo.name} className="tr-marquee-img" />
+                <img src={logo.src} alt={logo.name} className={`tr-marquee-img${logo.large ? ' tr-marquee-img--large' : ''}`} />
               </div>
             ))}
           </div>
